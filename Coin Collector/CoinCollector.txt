@@ -1,0 +1,29 @@
+namespace CoinCollector
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            this.BackColor = Color.FromArgb(63, 60, 60);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int coins = 0;
+
+            do
+            {
+                coins += 10;
+            }
+            while (coins < 100);
+
+            lstcoins.Items.Add("Coins: " + coins);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

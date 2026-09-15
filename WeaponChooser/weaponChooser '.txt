@@ -1,0 +1,43 @@
+namespace WeaponChoose
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            this.BackColor = Color.FromArgb(156, 145, 139);
+
+
+        }
+
+        private void cmbWeapon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFight_Click(object sender, EventArgs e)
+        {
+            string weapon = cmbWeapon.Text;
+
+            switch (weapon)
+            {
+                case "Sword":
+                    lblResult.Text = "⚔️ You attacked with a Sword!";
+                    break;
+
+                case "Bow":
+                    lblResult.Text = "🏹 You attacked with a Bow!";
+                    break;
+
+                case "Magic":
+                    lblResult.Text = "✨ You cast a Magic Spell!";
+                    break;
+
+                default:
+                    lblResult.Text = "Select a weapon first!";
+                    break;
+            }
+        }
+
+    }
+}

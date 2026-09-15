@@ -1,0 +1,30 @@
+namespace HeartCollector
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            this.BackColor = Color.FromArgb(121, 77, 198);
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            progressBar1.Value = 0;
+
+            for(int health = 0; health <= 100; health += 20)
+            {
+                progressBar1.Value = health;
+                lblHealth.Text = "Health: " + health + "%";
+
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(300);
+
+            }
+
+            MessageBox.Show("Full Health");
+        }
+    }
+}
